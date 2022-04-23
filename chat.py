@@ -44,20 +44,22 @@ def predict_class(sentence):
     return return_list
 
 
-def get_response(intents_list, intents_json):
-    tag = intents_list[0]['intent']
-    list_of_intents = intents_json['intents']
+def get_response(message):
+    ints = predict_class(message)
+    tag = ints[0]['intent']
+    list_of_intents = intents['intents']
     for i in list_of_intents:
         if i['tag'] == tag:
             result = random.choice(i['responses'])
             break
     return result
 
-
-print("Go! bot is running!")
-
-while True:
-    message = input("")
-    ints = predict_class(message)
-    res = get_response(ints, intents)
-    print(res)
+if __name__ == "__main__":
+    print("Let's chat! (type 'quit' to exit)")
+    while True:
+        sentence = input("You: ")
+        res = get_response(sentence)
+        # sentence = "do you use credit cards?"
+        if sentence == "quit":
+            break
+        print(res)

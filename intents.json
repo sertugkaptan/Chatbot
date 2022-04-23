@@ -515,6 +515,7 @@
       ],
       "responses": [
         "delay is due to manufacuring",
+
         "Delay is due to inavailable components"
       ],
       "context": [
@@ -525,6 +526,7 @@
       "tag": "name",
       "patterns": [
         "what is your name?",
+        "Who are you?",
         "what should I call you?"
       ],
       "responses": [
