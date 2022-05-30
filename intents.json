@@ -12,8 +12,7 @@
         "Good day"
       ],
       "responses": [
-        "Hello, thanks for asking",
-        "Good to see you again",
+        "Hello!",
         "Hi there, how can I help?"
       ],
       "context": [
@@ -69,102 +68,106 @@
       ]
     },
     {
-      "tag": "options",
+      "tag": "Staff1",
       "patterns": [
-        "How you could help me?",
-        "What help you provide?",
-        "How you can be helpful?"
+        "ersin caglar information",
+        "information about ersin hoca"
       ],
       "responses": [
-        "I can guide you through Adverse management problems, order tracking, person to be contacted and Department related queries",
-        "I can provide support related to following problems technical query,management related query,order related query,tracking related query,procurement query,outsourcing problem,manufacturing delay,"
+        "Office:AS103, Email:erscaglar@gmail.com"
       ],
       "context": [
         ""
       ]
     },
     {
-      "tag": "order_tracking",
+      "tag": "Staff2",
       "patterns": [
-        "where is order with id 431B67?",
-        "track order 562B78",
-        "Where is my order with id 561A24?"
+        "ezgi ulker ",
+        "contact information ezgi hoca"
       ],
       "responses": [
-        "Delayed",
-        "Dispatched",
-        "On the Way!"
+        "Office:AS302, Email:eulker@eul.edu.tr"
       ],
       "context": [
         ""
       ]
     },
     {
-      "tag": "order_components",
+      "tag": "Staff3",
       "patterns": [
-        "order id 345A23 comprises of?",
-        "List of components"
+        "vesile evrim",
+        "vesile hoca information"
       ],
       "responses": [
-        "order comprises of hardisk and bluetooth"
+        "Office:AS311, Email:vevrim@eul.edu.tr"
       ],
       "context": [
         ""
       ]
     },
     {
-      "tag": "missing_id",
+      "tag": "Staff4",
       "patterns": [
-        "where is the order",
-        "where is my order",
-        "locate the order",
-        "Delivery date of order"
+        "ferhun yorgancioglu",
+        "ferhun hoca"
       ],
       "responses": [
-        "Please enter with order ID"
+        "Office:AS305, Email:fyorgancioglu302@eul.edu.tr"
       ],
       "context": [
         ""
       ]
     },
     {
-      "tag": "Location",
+      "tag": "contact",
       "patterns": [
-        "find order location 32712",
-        "What is the Location of order 23A31?"
+        "what is the contact infromation",
+        "contact information",
+        "contact",
+        "how can i reach the university"
       ],
       "responses": [
-        "It is in germany",
-        "It is in Berlin",
-        "It has reached china",
-        "It has reached Banglore"
+        "Tel: +90 392 660 2000\nFaks: +90 392 727 75 28\nAdress: Lefke Avrupa Universitesi\nLefke , KKTC Mersin 10, TURKIYE \nE-mail: info@eul.edu.tr"
       ],
       "context": [
         ""
       ]
     },
     {
-      "tag": "search_person_by_id",
+      "tag": "location",
       "patterns": [
-        "I want an appoitment with Manoj kumar",
-        "set an appointment with Sujata Nandi"
+        "what is the location of the university",
+        "location of the university"
       ],
       "responses": [
-        "Fixing an appointment."
+        "Adress: Lefke Avrupa Universitesi\nLefke , KKTC Mersin 10, TURKIYE"
       ],
       "context": [
         ""
       ]
     },
     {
-      "tag": "appointment status",
+      "tag": "opening_hours",
       "patterns": [
-        "Is my appointment fixed?",
-        "Do I have an appointment today?"
+        "when does the university open",
+        "oppening hours of the university"
       ],
       "responses": [
-        "Yes",
-        "NO! Not Yet"
+        "University opens at 8 AM and Closes at 5 PM."
+      ],
+      "context": [
+        ""
+      ]
+    },
+    {
+      "tag": "Engineering_Faculty",
+      "patterns": [
+        "Where is engineering faculty",
+        "engineering faculty"
+      ],
+      "responses": [
+        "Engineering faculty is at 3rd floor of Rauf raif Denktas egitim kompleksi"
       ],
       "context": [
         ""
@@ -185,13 +188,14 @@
       ]
     },
     {
-      "tag": "cost_lowering",
+      "tag": "Transportaion",
       "patterns": [
-        "Cost Lowering changes to be made?",
-        "what changes could lower cost?"
+        "transportation",
+        "bus hours",
+        "busses"
       ],
       "responses": [
-        "Increase Transportation capacity utilisation,Increase supply chain velocity,Reduce order variability"
+        "https://www.eul.edu.tr/laude-yasam/hizmetler/ulasim/"
       ],
       "context": [
         ""
@@ -544,7 +548,7 @@
         "how are you"
       ],
       "responses": [
-        "Thanks For Asking!How can I help you?"
+        "Thanks For Asking! I'm okay! How can I help you?"
       ],
       "context": [
         ""
@@ -583,30 +587,14 @@
       ]
     },
     {
-      "tag": "leave",
-      "patterns": [
-        "Is Michel Sharma on leave?",
-        "Is Siddhart Roy present today?",
-        "Is Shantanu Bhatt in office?"
-      ],
-      "responses": [
-        "Give me a moment!I'll just check",
-        "yes",
-        "no"
-      ],
-      "context": [
-        ""
-      ]
-    },
-    {
       "tag": "hours",
       "patterns": [
-        "Opening hours of the cafeteria?",
-        "when does the cafeteria open",
-        "office canteen opening time"
+        "Opening hours of the university?",
+        "when does the university open",
+        "university opening time"
       ],
       "responses": [
-        "It is open from Monday-Saturday 9:00am-7:30pm"
+        "It is open from Monday-Saturday 8:00am-5:00pm"
       ],
       "context": [
         ""
