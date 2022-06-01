@@ -59,15 +59,20 @@ class Chatbox {
           .then(r => r.json())
           .then(r => {
             let msg2 = { name: "Sam", message: r.answer };
+
             this.messages.push(msg2);
             this.updateChatText(chatbox)
+            if(msg2.message == "Student population piechart")
+            {
+             window.location.replace("/piechart")
+            }
             textField.value = ''
 
         }).catch((error) => {
             console.error('Error:', error);
             this.updateChatText(chatbox)
             textField.value = ''
-          });
+         });
     }
 
     updateChatText(chatbox) {

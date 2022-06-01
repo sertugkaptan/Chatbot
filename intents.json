@@ -174,21 +174,21 @@
       ]
     },
     {
-      "tag": "check_leave",
+      "tag": "population",
       "patterns": [
-        "Is Sujata Nandi on leave?",
-        "Is Manish Kumar on leave?"
+        "what is the population of the university?",
+        "Population of university",
+        "Number of students"
       ],
       "responses": [
-        "No Not On Leave",
-        "Yes On Leave"
+        "Student population piechart"
       ],
       "context": [
         ""
       ]
     },
     {
-      "tag": "Transportaion",
+      "tag": "Transportation",
       "patterns": [
         "transportation",
         "bus hours",

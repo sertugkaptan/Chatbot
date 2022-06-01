@@ -4,11 +4,34 @@
 
 <head>
 
+    <style>
+        .piechart {
+            margin-top: 300px;
+            display: block;
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background-image: conic-gradient(
+                red 36deg, orange 36deg 170deg, yellow 170deg
+                );
+        }
+
+        body,
+        .piechart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
     <meta charset="UTF-8">
     <title>Chatbot</title>
 </head>
 <body>
+
 <div class="container">
+    <h1>Student Population of the university</h1>
+    <div class="piechart"></div>
     <div class="chatbox">
         <div class="chatbox__support">
             <div class="chatbox__header">

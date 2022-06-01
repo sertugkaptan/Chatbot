@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, redirect, url_for
 
 from chat import get_response
 
@@ -15,6 +15,10 @@ def predict():
     response = get_response(text)
     message = {"answer": response}
     return jsonify(message)
+
+@app.get("/piechart/")
+def piechart():
+    return render_template("piechart.html")
 
 if __name__ == "__main__":
     app.run(debug = True)
