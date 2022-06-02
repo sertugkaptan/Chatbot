@@ -62,9 +62,13 @@ class Chatbox {
 
             this.messages.push(msg2);
             this.updateChatText(chatbox)
-            if(msg2.message == "Student population piechart")
+
+            if(msg2.message == "Redirecting to student population piechart...")
             {
-             window.location.replace("/piechart")
+             setTimeout(function(){
+                window.location.replace("/piechart")
+             }, 3000);
+
             }
             textField.value = ''
 

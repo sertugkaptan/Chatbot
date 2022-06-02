@@ -23,6 +23,36 @@
             justify-content: center;
             align-items: center;
         }
+        #footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .box {
+        float: left;
+        height: 15px;
+        width: 15px;
+        border: 1px solid black;
+        clear: both;
+    }
+
+    .red {
+    background-color: red;
+    }
+
+    .green {
+    background-color: green;
+    }
+
+    .orange {
+    background-color: orange;
+    }
+
+    .yellow {
+    background-color: yellow;
+    }
+
+
     </style>
     <meta charset="UTF-8">
     <title>Chatbot</title>
@@ -31,12 +61,30 @@
 
 <div class="container">
     <h1>Student Population of the university</h1>
+    <h3>There are 30000 students currently attending European University of Lefke </h3>
     <div class="piechart"></div>
+
+    <div id="footer">
+        <div>
+            <div class="box yellow"></div>
+            Turkish 60%
+        </div>
+        <div>
+            <div class="box orange"></div>
+            Pakistani 30%
+        </div>
+        <div>
+            <div class="box red"></div>
+            other 10%
+        </div>
+    </div>
+
     <div class="chatbox">
         <div class="chatbox__support">
             <div class="chatbox__header">
                 <div class="chatbox__image--header">
-                    <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="image">
+                    <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png"
+                         alt="image">
                 </div>
                 <div class="chatbox__content--header">
                     <h4 class="chatbox__heading--header">Chat support</h4>
@@ -52,15 +100,18 @@
             </div>
         </div>
         <div class="chatbox__button">
-            <button><img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" /></button>
+            <button><img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}"/></button>
         </div>
     </div>
 </div>
 
-    <script>
+<script>
         $SCRIPT_ROOT = {{ request.script_root|tojson }};
-    </script>
-    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+
+
+
+</script>
+<script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
 
 </body>
 </html>
