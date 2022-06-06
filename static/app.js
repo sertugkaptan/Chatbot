@@ -68,8 +68,29 @@ class Chatbox {
              setTimeout(function(){
                 window.location.replace("/piechart")
              }, 3000);
-
             }
+            if(msg2.message == "Redirecting to transportation...")
+            {
+            console.log("1")
+             setTimeout(function(){
+                window.location.replace("/transportation")
+             }, 3000);
+            }
+            if(msg2.message == "Redirecting to Oibs...")
+            {
+            console.log("1")
+             setTimeout(function(){
+                window.location.replace("http://oibs.eul.edu.tr/ukuapp/")
+             }, 3000);
+            }
+            if(msg2.message == "Redirecting to Moodle...")
+            {
+            console.log("1")
+             setTimeout(function(){
+                window.location.replace("https://moodle.eul.edu.tr/login/index.php")
+             }, 3000);
+            }
+
             textField.value = ''
 
         }).catch((error) => {

@@ -195,7 +195,7 @@
         "busses"
       ],
       "responses": [
-        "https://www.eul.edu.tr/laude-yasam/hizmetler/ulasim/"
+        "Redirecting to transportation..."
       ],
       "context": [
         ""
@@ -500,27 +500,28 @@
       ]
     },
     {
-      "tag": "predict_delay",
+      "tag": "moodle",
       "patterns": [
-        "why is order 23A12 delayed"
+        "moodle",
+        "moodle webiste",
+        "lectures website"
       ],
       "responses": [
-        "delay is due to manufacuring",
-        "Delay is due to inavailable components"
+        "Redirecting to Moodle..."
       ],
       "context": [
         ""
       ]
     },
     {
-      "tag": "predict_delay",
+      "tag": "oibs",
       "patterns": [
-        "why is order 23A12 delayed"
+        "student oibs",
+        "student information website",
+        "oibs website"
       ],
       "responses": [
-        "delay is due to manufacuring",
-
-        "Delay is due to inavailable components"
+        "Redirecting to Oibs..."
       ],
       "context": [
         ""

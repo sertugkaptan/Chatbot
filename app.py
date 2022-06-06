@@ -20,5 +20,13 @@ def predict():
 def piechart():
     return render_template("piechart.html")
 
+@app.get("/transportation/")
+def transportation():
+    return render_template("transportation.html")
+
+@app.get("/ceng/")
+def ceng():
+    return render_template("ceng.html")
+
 if __name__ == "__main__":
     app.run(debug = True)
