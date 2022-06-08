@@ -1,6 +1,8 @@
 from flask import Flask, render_template, request, jsonify, redirect, url_for
-
 from chat import get_response
+import xlrd
+import openpyxl
+import xlsxwriter
 
 app = Flask(__name__)
 
@@ -27,6 +29,23 @@ def transportation():
 @app.get("/ceng/")
 def ceng():
     return render_template("ceng.html")
+
+@app.post("/questionare")
+def questionare():
+    text = request.get_json().get("message")
+    workbook = openpyxl.load_workbook('write_data.xlsx')
+    worksheet = workbook['Sheet1']
+
+    # Give the location of the file
+    loc = ("write_data.xlsx")
+    # To open Workbook
+    wb = xlrd.open_workbook(loc)
+    sheet = wb.sheet_by_index(0)
+    val = 'A' + str(sheet.nrows+1)
+    worksheet[val] = int(text)
+    workbook.save('write_data.xlsx')
+    message = {"answer": "Thank you for your feedback"}
+    return jsonify(message)
 
 if __name__ == "__main__":
     app.run(debug = True)

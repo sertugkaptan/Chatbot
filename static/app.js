@@ -5,7 +5,7 @@ class Chatbox {
             chatBox: document.querySelector('.chatbox__support'),
             sendButton: document.querySelector('.send__button'),
         }
-
+        this.flag = 0;
         this.state = false;
         this.messages = [];
     }
@@ -41,14 +41,46 @@ class Chatbox {
     onSendButton(chatbox) {
         var textField = chatbox.querySelector('input');
         let text1 = textField.value
+
         if (text1 === "") {
             return;
         }
 
         let msg1 = { name: "User", message: text1 }
         this.messages.push(msg1);
+        if(text1 == "Goodbye"){
+            this.flag = 1
+            let msg2 = { name: "Sam",  message: "What do you think of the Bot using 1-5 rating!"};
+            this.messages.push(msg2);
+            this.updateChatText(chatbox)
+            textField.value = ''
+        }
+        else if(this.flag == 1){
+            this.flag = 0
+            fetch('http://127.0.0.1:5000/questionare', {
+            method: 'POST',
+            body: JSON.stringify({ message: text1 }),
+            mode: 'cors',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+           })
+          .then(r => r.json())
+          .then(r => {
+            let msg2 = { name: "Sam",  message: r.answer  };
 
+            this.messages.push(msg2);
+            this.updateChatText(chatbox)
+            textField.value = ''
+           }).catch((error) => {
+            console.error('Error:', error);
+            this.updateChatText(chatbox)
+            textField.value = ''
+         });
+        }
+        else{
         fetch('http://127.0.0.1:5000/predict', {
+
             method: 'POST',
             body: JSON.stringify({ message: text1 }),
             mode: 'cors',
@@ -98,6 +130,7 @@ class Chatbox {
             this.updateChatText(chatbox)
             textField.value = ''
          });
+        }
     }
 
     updateChatText(chatbox) {
